@@ -1,3 +1,8 @@
+:root {
+  --brown-border: 1.5px solid #8d7364;
+  --light-text-color: #fff4df;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #2d2920;
@@ -57,15 +62,15 @@ td {
 /* Header */
 .header {
   background-color: #3d322e;
-  color: #fff4df;
-  border-bottom: 2px solid #fff4df;
+  color: var(--light-text-color);
+  border-bottom: var(--brown-border);
 }
 
 /* table head */
 .table-head {
   font-weight: 700;
   padding: 16px 8px;
-  color: #fff4df;
+  color: var(--light-text-color);
 }
 
 .table-head .singer,
@@ -81,15 +86,18 @@ td {
 }
 
 /* table body */
-.table-row:not(:last-child),
-.song {
-  border-bottom: 1.5px solid #8d7364;
+.table-row:not(:last-child) {
+  border-bottom: var(--brown-border);
 }
 
 .singer,
 .song {
   width: 20%;
   background-color: rgba(250, 231, 202, 0.65);
+}
+
+.song {
+  border-right: var(--brown-border);
 }
 
 /* .singer:nth-child(even),
