@@ -1,24 +1,21 @@
 body {
   font-family: "Roboto", sans-serif;
-  color: #282722;
-  background: #fff;
+  color: #2d2920;
+  background-color: #fff;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
 }
 
-div {
-  display: flex;
-  justify-content: center;
-}
-
 h1 {
   text-align: center;
+  margin: 0;
+  padding: 20px 0;
 }
 
 a {
   text-decoration: none;
-  color: #8d7364;
+  color: #715b4e;
 }
 
 a:hover,
@@ -27,8 +24,25 @@ a:active {
   color: #231d1a;
 }
 
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-container {
+  overflow-x: auto;
+  background-image: url(https://www.superprof.com.ua/blog/wp-content/uploads/2022/04/playguitar-scaled.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  flex-grow: 1;
+}
+
 table {
+  margin: 40px auto;
   width: 80%;
+  border-collapse: collapse;
+  box-shadow: 4px 4px 4px 0px rgba(24, 21, 19, 0.8);
 }
 
 th {
@@ -36,49 +50,65 @@ th {
 }
 
 td {
-  padding: 4px 8px;
+  padding: 8px;
 }
 
-/*  */
+/* Header */
+.header {
+  background-color: #3d322e;
+  color: #fff4df;
+  border-bottom: 2px solid #fff4df;
+}
+
+/* table head */
 .table-head {
   text-align: center;
   font-weight: 700;
+  padding: 16px 8px;
+  color: #fff4df;
 }
 
-.table-row {
-  background-color: bisque;
+.table-head .singer,
+.table-head .song {
+  background-color: rgba(227, 197, 152, 0.65);
 }
 
-.singer {
+.table-head .chord-link,
+.table-head .ton,
+.table-head .capo,
+.table-head .details {
+  background-color: rgba(241, 212, 169, 0.65);
+}
+
+/* table body */
+.table-row:not(:last-child) {
+  border-bottom: 1.5px solid #8d7364;
+}
+
+.singer,
+.song {
   width: 20%;
-  background: #fae7ca;
+  background-color: rgba(250, 231, 202, 0.65);
+  text-align: center;
 }
 
 .song {
-  text-align: center;
-  width: 20%;
-  background: #fae7ca;
+  border-right: 1.5px solid #8d7364;
 }
+/* .singer:nth-child(even),
+.song:nth-child(even) {
+  background-color: #faf1e4;
+} */
 
-.chord-link {
-  text-align: center;
-  width: 15%;
-  background: #fff1dd;
-}
-
-.ton {
-  text-align: center;
-  width: 10%;
-  background: #fff1dd;
-}
-
+.chord-link,
+.ton,
 .capo {
   text-align: center;
   width: 10%;
-  background: #fff1dd;
+  background-color: rgba(255, 240, 218, 0.65);
 }
 
 .details {
-  width: 25%;
-  background: #fff1dd;
+  width: 30%;
+  background-color: rgba(255, 240, 218, 0.65);
 }
