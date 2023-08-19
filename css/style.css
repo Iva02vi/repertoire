@@ -86,6 +86,10 @@ td {
 }
 
 /* table body */
+.lang {
+  text-transform: uppercase;
+}
+
 .table-row:not(:last-child) {
   border-bottom: var(--brown-border);
 }
