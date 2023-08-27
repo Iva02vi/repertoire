@@ -1,5 +1,6 @@
 :root {
-  --brown-border: 1.5px solid #8d7364;
+  --dark-brown-border: 1.5px solid #8d7364;
+  --light-brown-border: 1px solid #a1847194;
   --light-text-color: #fff4df;
 }
 
@@ -29,6 +30,11 @@ a:active {
   color: #231d1a;
 }
 
+audio {
+  width: 100%;
+  height: 24px;
+}
+
 .page-container {
   min-height: 100vh;
   display: flex;
@@ -36,8 +42,9 @@ a:active {
 }
 
 .table-container {
-  overflow-x: auto;
+  overflow: auto;
   background-image: url(https://www.superprof.com.ua/blog/wp-content/uploads/2022/04/playguitar-scaled.jpg);
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   flex-grow: 1;
@@ -46,7 +53,6 @@ a:active {
 table {
   text-align: center;
   margin: 40px auto;
-  width: 80%;
   border-collapse: collapse;
   box-shadow: 4px 4px 4px 0px rgba(24, 21, 19, 0.8);
 }
@@ -63,7 +69,7 @@ td {
 .header {
   background-color: #3d322e;
   color: var(--light-text-color);
-  border-bottom: var(--brown-border);
+  border-bottom: var(--dark-brown-border);
 }
 
 /* table head */
@@ -71,6 +77,8 @@ td {
   font-weight: 700;
   padding: 16px 8px;
   color: var(--light-text-color);
+  position: sticky;
+  top: 0;
 }
 
 .table-head .singer,
@@ -91,7 +99,11 @@ td {
 }
 
 .table-row:not(:last-child) {
-  border-bottom: var(--brown-border);
+  border-bottom: var(--light-brown-border);
+}
+
+.first {
+  border-top: var(--dark-brown-border);
 }
 
 .singer,
@@ -101,7 +113,11 @@ td {
 }
 
 .song {
-  border-right: var(--brown-border);
+  border-right: var(--dark-brown-border);
+}
+
+tbody .song {
+  font-weight: 500;
 }
 
 /* .singer:nth-child(even),
@@ -117,6 +133,26 @@ td {
 }
 
 .details {
-  width: 30%;
+  width: 25%;
   background-color: rgba(255, 240, 218, 0.65);
+}
+
+@media (max-width: 472px) {
+  table {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 200%;
+  }
+}
+
+@media (min-width: 473px) and (max-width: 840px) {
+  table {
+    width: 90%;
+  }
+}
+
+@media (min-width: 841px) {
+  table {
+    width: 80%;
+  }
 }
